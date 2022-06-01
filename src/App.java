@@ -36,8 +36,6 @@ public class App {
             } catch (Exception e) {
             }
 
-            // int jourConsomation = Integer.parseInt(split[5]);
-            // int jourStock = Integer.parseInt(split[6]);
             if (categorie == Categorie.FLEUR) {
                 Fleurs flower = new Fleurs(nom, dateLimiteConsommation, stock, color, categorie);
                 fleursList.add(flower);
@@ -50,13 +48,15 @@ public class App {
             }
         }
 
+        // Putting the list of flowers into the map.
         Mapvegetals.put(Categorie.FLEUR, fleursList);
         Mapvegetals.put(Categorie.LEGUME, legumesList);
         Mapvegetals.put(Categorie.FRUIT, fruitsList);
 
         for (Categorie categorie : Mapvegetals.keySet()) {
-            System.out.println(categorie.toString() + " " + Mapvegetals.get(categorie).size());
-            System.out.println(categorie.toString() + " " + Mapvegetals.get(categorie));
+            System.out.println(categorie.toString() + " " +
+                    Mapvegetals.get(categorie).size());
+            System.out.println(categorie.toString() + "  " + Mapvegetals.get(categorie));
         }
     }
 

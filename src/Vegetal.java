@@ -9,7 +9,6 @@ public class Vegetal {
     public int stock;
     public LocalDate dateLimiteConsommation;
     public Color color;
-    
 
     // It's a constructor.
     public Vegetal(String nom, LocalDate dateLimiteConsommation, int stock, Categorie categorie, Color color) {
@@ -20,13 +19,11 @@ public class Vegetal {
         this.color = color;
     }
 
-
     @Override
     public String toString() {
         String m = "Nom : " + this.nom + " | " + " dateLimiteConsommation " + this.dateLimiteConsommation
                 + " | " + "Stock : "
-                + this.stock + " | " + " | " + "Catégorie : " + this.categorie + " | " + " | " + "Couleur : "
-                + this.color;
+                + this.stock + " | " + " | " + "Catégorie : " + this.categorie + " | ";
         return m;
     }
 

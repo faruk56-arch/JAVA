@@ -1,6 +1,8 @@
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Fleurs extends Vegetal {
+    int nbTiges;
 
     public Fleurs(String nom, LocalDate dateLimiteConsommation, int stock, Color color,
             Categorie categorie) {
@@ -9,9 +11,8 @@ public class Fleurs extends Vegetal {
 
     @Override
     public String toString() {
-        String comm = super.toString();
-        return comm + nom + ',' + "FLEUR de couleur dominante, " + color + " , " + stock + " en stock , périme dans "
-                + dateLimiteConsommation;
+        return nom + ',' + "FLEUR de couleur dominante, " + color + " , " + stock + " en stock , périme dans "
+                + ChronoUnit.DAYS.between(LocalDate.now(), dateLimiteConsommation) + " jours";
     }
 
 }

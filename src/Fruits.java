@@ -1,7 +1,7 @@
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Fruits extends Vegetal {
-
 
     public Fruits(String nom, LocalDate dateLimiteConsommation, int stock,
             Color color, Categorie categorie) {
@@ -11,8 +11,8 @@ public class Fruits extends Vegetal {
 
     @Override
     public String toString() {
-        String comm = super.toString();
-        return comm + nom + ',' + "FRUIT , " +stock + "kg en stock , périme dans " + dateLimiteConsommation;
+        return nom + "  " + stock + "kg en stock , périme dans "
+                + ChronoUnit.DAYS.between(LocalDate.now(), dateLimiteConsommation)+ " "+ " jours" + " | ";
     }
 
 }
