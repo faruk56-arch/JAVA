@@ -12,7 +12,7 @@ public class Fruits extends Vegetal {
     @Override
     public String toString() {
         return nom + "  " + stock + "kg en stock , périme dans "
-                + ChronoUnit.DAYS.between(LocalDate.now(), dateLimiteConsommation)+ " "+ " jours" + " | ";
+                + ChronoUnit.DAYS.between(LocalDate.now(), dateLimiteConsommation) + " " + " jours " + " | ";
     }
 
 }

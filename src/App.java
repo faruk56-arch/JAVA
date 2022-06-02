@@ -30,6 +30,7 @@ public class App {
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             LocalDate dateLimiteConsommation = LocalDate.parse(split[2], dtf);
             int stock = Integer.parseInt(split[3]);
+
             Color color = null;
             try {
                 color = Color.valueOf(split[4]);
@@ -53,10 +54,10 @@ public class App {
         Mapvegetals.put(Categorie.LEGUME, legumesList);
         Mapvegetals.put(Categorie.FRUIT, fruitsList);
 
+        // It's looping through the keys of the map.
         for (Categorie categorie : Mapvegetals.keySet()) {
-            System.out.println(categorie.toString() + " " +
-                    Mapvegetals.get(categorie).size());
-            System.out.println(categorie.toString() + "  " + Mapvegetals.get(categorie));
+            System.out.println(categorie.toString() + " : " + Mapvegetals.get(categorie).size());
+            System.out.println(categorie.toString() + " : " + Mapvegetals.get(categorie));
         }
     }
 
