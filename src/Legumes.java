@@ -11,8 +11,11 @@ public class Legumes extends Vegetal {
 
     @Override
     public String toString() {
-        return nom + ',' + " " + stock + "kg en stock , périme dans "
+        return nom + " " + stock + "kg en stock , périme dans "
                 + ChronoUnit.DAYS.between(LocalDate.now(), dateLimiteConsommation) + " jours" + " | ";
     }
 
 }
+
+// To comparer between two date ranges, we can use the
+// ChronoUnit.DAYS.between(LocalDate.now(), dateLimiteConsommation)

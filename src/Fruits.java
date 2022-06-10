@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
+// Herited from Vegetal
 public class Fruits extends Vegetal {
 
     public Fruits(String nom, LocalDate dateLimiteConsommation, int stock,
